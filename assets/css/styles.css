@@ -211,7 +211,8 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 260px;
+  width: 200px;
+  border-radius: 3rem;
 }
 .home__blob {
   fill: var(--first-color);
@@ -247,7 +248,7 @@ img {
 }
 .about__img img {
   width: 200px;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 /* ===== SKILLS =====*/

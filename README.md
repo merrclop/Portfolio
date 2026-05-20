@@ -1,52 +1,39 @@
-# 💻 Personal Portfolio — Merrclop
+# 💻 Personal Portfolio — Mykhailo Kabar (merrclop)
 
-Це мій персональний вебсайт-портфоліо, створений для демонстрації моїх навичок, проектів та професійного досвіду. Сайт має адаптивний дизайн і сучасний інтерфейс з використанням анімацій.
+Welcome to my personal portfolio website! This project is designed to showcase my technical skills, infrastructure knowledge, and engineering mindset. The interface is built with a modern, dark, terminal-inspired aesthetic reflecting my passion for Linux, automation, and system systems internals.
 
-## 🚀 Технології
+🌐 **Live Portfolio:** [merrclop.github.io/portfolio/](merrclop.github.io/portfolio/)
 
-При розробці цього проекту я використовував:
+---
 
-  * **HTML5** — семантична розмітка сторінок.
-  * **CSS3 / SCSS** — стилізація з використанням сучасних методів Flexbox та Grid для адаптивності.
-  * **JavaScript (Vanilla)** — реалізація логіки меню та інтерактивних елементів.
-  * **ScrollReveal** — бібліотека для створення плавних анімацій при скролінгу.
-  * **Boxicons** — набір іконок для інтерфейсу та соціальних мереж.
+## 🚀 Tech Stack & Core Tools
 
-## 🛠️ Функціонал
+The website is crafted using modern frontend practices, focus on performance, and responsive design:
 
-  * **Адаптивний дизайн:** Сайт коректно відображається на смартфонах, планшетах та десктопах завдяки Media Queries.
-  * **Інтерактивне меню:** Зручна навігація з активними посиланнями, що підсвічуються при скролінгу.
-  * **Анімації:** Плавна поява елементів при перегляді сторінки.
-  * **Секція Skills:** Візуалізація моїх технічних навичок (HTML, CSS, JS, UX/UI).
-  * **Портфоліо:** Галерея моїх робіт з посиланнями на реальні проекти.
+* **HTML5** — Semantic markup for reliable and structured content.
+* **Tailwind CSS (via CDN)** — Fully customized theme matching a dark developer style, utilizing fluid typography and grid layouts.
+* **SASS / SCSS** — Modular stylesheet design, handling custom grid overlays, smooth noise-texture filters, and core typography setups.
+* **JavaScript (Vanilla)** — Pure JS logic managing interactive mobile navigation, dynamic footer dates, and customized multi-phrase typing effects.
+* **Lucide Icons** — Lightweight interface iconography combined with embedded custom SVG brand assets (Linux Tux, GitHub, LinkedIn).
 
-## 📁 Структура проекту
+---
+
+## 🛠️ Key Features
+
+* **Responsive Layout** — Flawless experience across mobile devices, tablets, and high-res desktop monitors via Tailwind media utilities.
+* **Terminal Visuals & Micro-interactions** — Interactive components, a sleek grid background system, and command-line execution blocks.
+* **Scroll-Triggered Badge Animations** — Dynamic fade-in-up physics for structural elements as the user navigates the content.
+* **Skills Showcase** — Visual grid containing core systems expertise including File Systems management, LVM, Shell Scripting, Git workflow, and Systemd process tracking.
+
+---
+
+## 📁 Project Structure
 
 ```text
 ├── assets/
-│   ├── css/        # Скомпільовані стилі
-│   ├── img/        # Зображення та ресурси
-│   ├── js/         # Скрипти анімацій та навігації
-│   └── scss/       # Початкові файли стилів (Sass)
-├── index.html      # Головна сторінка
-└── README.md
-```
-
-## 👨‍💻 Про мене
-
-Я Software Engineer, який активно розвиває навички у програмуванні та веброзробці. Маю досвід створення вебсайтів та цікавлюся сферою SMM.
-
-  * **Студент:** Zolochiv Professional College of Lviv Polytechnic National University.
-  * **Telegram-канал:** [Sudo merrclop](https://t.me/sudo_merrclop) — пишу про IT та Linux.
-
-## 📞 Контакти
-
-Ви можете знайти мене тут:
-
-  * **LinkedIn:** [Михайло Кабар](https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE-%D0%BA%D0%B0%D0%B1%D0%B0%D1%80-288476210/)
-  * **GitHub:** [@merrclop](https://github.com/merrclop)
-  * **Telegram:** [@merrclop](https://t.me/merrclop)
-
------
-
-*© 2026 Merrclop. All rights reserved.*
+│   ├── css/        # Compiled and production-ready stylesheets
+│   ├── img/        # Visual resources and site graphics
+│   ├── js/         # Animation scripts and interface handlers (main.js)
+│   └── scss/       # SASS source architecture containing custom definitions (styles.scss)
+├── index.html      # Main website page layout & content entry point
+└── README.md       # Repository documentation

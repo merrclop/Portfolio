@@ -1,198 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mykhailo Kabar — Software Engineering & DevOps</title>
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            surface: {
+              900: '#0a0e17',
+              800: '#0f1520',
+              700: '#151d2e',
+              600: '#1a2438',
+            },
+            accent: {
+              DEFAULT: '#22d3ee',
+              dim: '#0e7490',
+              glow: 'rgba(34, 211, 238, 0.15)',
+            },
+            mint: '#34d399',
+          }
+        }
+      }
+    }
+  </script>
 
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Portfolio Mikhajlo Kabar</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+<body class="bg-surface-900 text-gray-300 font-sans noise-overlay grid-bg">
 
-<body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav class="flex items-center justify-between h-16 sm:h-20">
+        <a href="#hero" class="flex items-center gap-2 group">
+          <span class="font-mono text-accent font-bold text-lg sm:text-xl tracking-tight">
+            <span class="text-gray-500 group-hover:text-accent transition-colors">~$</span>
+            <span class="ml-1">portfolio</span>
+          </span>
+        </a>
+
+        <ul class="hidden sm:flex items-center gap-1">
+          <li>
+            <a href="#hero" class="nav-link relative px-4 py-2 text-sm font-medium text-gray-400 hover:text-accent transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link relative px-4 py-2 text-sm font-medium text-gray-400 hover:text-accent transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link relative px-4 py-2 text-sm font-medium text-gray-400 hover:text-accent transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        <button id="mobile-menu-btn" class="sm:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-surface-700 transition-colors" aria-label="Toggle menu">
+          <i data-lucide="menu" class="w-5 h-5 text-gray-400"></i>
+        </button>
+      </nav>
+    </div>
+
+    <div id="mobile-menu" class="sm:hidden hidden bg-surface-800/95 backdrop-blur-xl border-t border-surface-600/50">
+      <ul class="flex flex-col py-4 px-6">
+        <li>
+          <a href="#hero" class="mobile-nav-link block py-3 text-sm font-medium text-gray-400 hover:text-accent transition-colors border-b border-surface-600/30">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#skills" class="mobile-nav-link block py-3 text-sm font-medium text-gray-400 hover:text-accent transition-colors border-b border-surface-600/30">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="#contact" class="mobile-nav-link block py-3 text-sm font-medium text-gray-400 hover:text-accent transition-colors">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 -translate-x-1/2 w-96 h-96 bg-accent/5 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 w-80 h-80 bg-cyan-600/5 rounded-full blur-[100px]"></div>
+      <div class="float-dot absolute top-1/3 right-[15%] w-1.5 h-1.5 bg-accent/30 rounded-full"></div>
+      <div class="float-dot absolute top-[60%] left-[10%] w-1 h-1 bg-accent/20 rounded-full"></div>
+      <div class="float-dot absolute top-[20%] left-[40%] w-1 h-1 bg-accent/25 rounded-full"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full text-center flex flex-col items-center z-10">
+      <div class="max-w-3xl flex flex-col items-center">
+        <div class="animate-fade-in-up">
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-mono font-medium mb-6">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
+            Open to opportunities • Mykhailo Kabar
+          </span>
+        </div>
+
+        <h1 class="animate-fade-in-up delay-100 text-3xl sm:text-4xl md:text-5xl lg:text-[3.4rem] font-bold leading-tight tracking-tight text-white mb-6">
+          Software Engineering Student
+          <span class="text-accent">and Linux enthusiast</span>
+          building a foundation to transition into
+          <span class="relative inline-block">
+            <span class="relative z-10">DevOps</span>
+            <span class="absolute bottom-1 left-0 right-0 h-3 bg-accent/15 -skew-x-2"></span>
+          </span>
+        </h1>
+
+        <div class="animate-fade-in-up delay-300 relative w-full text-left">
+          <div class="hidden sm:flex items-center gap-1.5 mb-3">
+            <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
+            <span class="ml-3 text-[11px] font-mono text-gray-600">about_kabar.sh</span>
+          </div>
+          <div class="bg-surface-800/60 border border-surface-600/40 rounded-xl sm:rounded-2xl p-5 sm:p-7 backdrop-blur-sm">
+            <p class="text-sm sm:text-[0.95rem] leading-relaxed text-gray-400 font-light">
+              I am a Software Engineering student and a dedicated Linux enthusiast with a strong background in system administration and automation. My passion lies in understanding how systems work under the hood, managing infrastructure, and optimizing environments.
+            </p>
+            <p class="text-sm sm:text-[0.95rem] leading-relaxed text-gray-400 font-light mt-4">
+              Currently, I am deep-diving into Linux internals, systemd, process management, advanced networking, and Bash scripting. My immediate goal is to build a rock-solid engineering foundation to successfully transition into a DevOps role.
+            </p>
+            <p class="text-sm sm:text-[0.95rem] leading-relaxed text-gray-400 font-light mt-4">
+              I am actively looking for opportunities, internships, or Junior positions where I can apply my knowledge, automate workflows, and grow within a professional infrastructure team.
+            </p>
+            <div class="mt-5 pt-4 border-t border-surface-600/30 flex items-center gap-2 font-mono text-sm">
+              <span class="text-accent">❯</span>
+              <span class="text-gray-400" id="typed-text"></span>
+              <span class="cursor-blink text-accent font-light">▋</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate-fade-in-up delay-500 flex flex-wrap justify-center gap-3 mt-8">
+          <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent/10 border border-accent/25 text-accent text-sm font-medium rounded-lg hover:bg-accent/20 hover:border-accent/40 transition-all duration-300">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            Get in touch
+          </a>
+          <a href="#skills" class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-700/50 border border-surface-600/40 text-gray-400 text-sm font-medium rounded-lg hover:bg-surface-600/50 hover:text-gray-300 transition-all duration-300">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            View skills
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="scroll-indicator" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center text-center gap-2 animate-fade-in-up delay-700 select-none pointer-events-none w-full">
+      <span class="text-[10px] font-mono text-gray-600 uppercase tracking-widest">Scroll</span>
+      <div class="w-5 h-8 border border-gray-700 rounded-full flex justify-center pt-1.5 mx-auto">
+        <div class="w-1 h-2 bg-gray-600 rounded-full animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="relative pt-24 pb-12 sm:pt-32 sm:pb-16">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-surface-600/50 to-transparent"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="mb-14 sm:mb-18 text-center flex flex-col items-center">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-px bg-accent"></span>
+          <span class="font-mono text-xs text-accent uppercase tracking-widest">Skills & Tools</span>
+          <span class="w-8 h-px bg-accent"></span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+          Industry Knowledge &
+          <span class="text-accent">Technologies</span>
+        </h2>
+        <p class="mt-4 text-gray-500 max-w-xl text-sm sm:text-base">
+          Core competencies I've built through hands-on practice, home labs, and continuous learning in systems and infrastructure.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="hard-drive" class="w-5 h-5"></i>
+            </div>
             <div>
-                <a href="#" class="nav__logo">Merrclop</a>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">File Systems</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">ext4, XFS, Btrfs</p>
             </div>
+          </div>
+        </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                </ul>
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="boxes" class="w-5 h-5"></i>
             </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">LVM</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">Logical volumes</p>
             </div>
-        </nav>
-    </header>
+          </div>
+        </div>
 
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Привіт,<br>Я <span class="home__title-color">Михайло</span><br>Software Engineer
-                </h1>
-
-                <a href="https://t.me/merrclop" class="button">Contact</a>
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="terminal" class="w-5 h-5"></i>
             </div>
-
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE-%D0%BA%D0%B0%D0%B1%D0%B0%D1%80-288476210/"
-                    class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.behance.net/e18c60ec" class="home__social-icon"><i class='bx bxl-behance'></i></a>
-                <a href="https://github.com/merrclop" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Linux CLI</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">CLI proficiency</p>
             </div>
+          </div>
+        </div>
 
-            <div class="home__img">
-                <img src="assets/img/perfil.png" style="opaciti: 1" alt="Profile Image" class="home__img"/>
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="file-code-2" class="w-5 h-5"></i>
             </div>
-        </section>
-
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/about.jpg" alt="">
-                </div>
-
-                <div>
-                    <h2 class="about__subtitle">Я Михайло Кабар</h2>
-                    <p class="about__text">Активно розвиваю свої навички у програмуванні, вивчаючи різні мови
-                        програмування та технології. На даний момент створив 4 вебсайти, що демонструє мій практичний
-                        досвід у
-                        веброзробці. Крім того, я регулярно відвідую вебінари з програмування, що дозволяє мені
-                        залишатися в курсі сучасних трендів у галузі IT.
-
-                        Окрім технічних навичок, я маю досвід у сфері SMM (Social Media Marketing). Працюю
-                        над просуванням проектів у соціальних мережах, що включає створення контенту, аналіз аудиторії
-                        та стратегії розвитку брендів у цифровому просторі.</p>
-                </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Shell Scripting</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">Automation scripts</p>
             </div>
-        </section>
+          </div>
+        </div>
 
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">Студент IT-напряму з базовими навичками програмування та роботи з базами
-                        даних. Брав участь у конкурсі-захисті IT-проектів, де презентував власні рішення. Працюю в
-                        команді, швидко навчаюсь новому.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">75%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">75%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">30%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">UX/UI</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">5%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                </div>
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                <path d="M12 2c-.77 0-1.51.15-2.2.42A3 3 0 0 0 6 5.5v1.65A4.5 4.5 0 0 0 3.5 11.5c0 1.9.14 3.01.6 4a2.22 2.22 0 0 0 1.9 1c.5 0 1-.22 1.4-.64.4-.42.6-.96.6-1.56v-1.8c0-.55.45-1 1-1s1 .45 1 1V19c0 .7.12 1.34.36 1.9A3.2 3.2 0 0 0 13.5 22h.3A3.2 3.2 0 0 0 17 20.2c.24-.56.36-1.2.36-1.9v-5.75c0-.55.45-1 1-1s1 .45 1 1v1.8c0 .6.2 1.14.6 1.56.4.42.9.64 1.4.64a2.22 2.22 0 0 0 1.9-1c.46-.99.6-2.1.6-4a4.5 4.5 0 0 0-2.5-4.35V5.5a3 3 0 0 0-3.8-2.92C13.51 2.15 12.77 2 12 2z"></path>
+                <path d="M9 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                <path d="M15 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                <path d="M10 13.5s1 1.5 2 1.5 2-1.5 2-1.5"></path>
+              </svg>
             </div>
-        </section>
-
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
-
-            <div class="work__container bd-grid">
-                <a href="https://merrclop.github.io/ToGoTravelTours/" class="work__img">
-                    <img src="assets/img/work1.jpg" alt="">
-                </a>
-                <a href="https://t.me/desteamtraffic" class="work__img">
-                    <img src="assets/img/work2.jpg" alt="">
-                </a>
-                <a href="https://t.me/freelance_space" class="work__img">
-                    <img src="assets/img/work3.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work4.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work5.jpg" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/work6.jpg" alt="">
-                </a>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Linux</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">System administration</p>
             </div>
-        </section>
+          </div>
+        </div>
 
-
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Merrclop</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/profile.php?id=100054234663697" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/merrclop/?__pwa=1#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-                <a href="https://x.com/merrclop" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="git-branch" class="w-5 h-5"></i>
             </div>
-            <p class="footer__copy">&#169; All rigths reserved</p>
-        </footer>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Git & GitHub</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">Version control</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Bash</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">Scripting language</p>
+            </div>
+          </div>
+        </div>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <div class="skill-badge group relative bg-surface-800/50 border border-surface-600/40 rounded-xl p-5 sm:p-6 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300 cursor-default">
+          <div class="flex flex-col items-center text-center gap-3">
+            <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-accent/10 text-accent group-hover:bg-accent/20 transition-colors duration-300">
+              <i data-lucide="cog" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Systemd</h3>
+              <p class="text-[11px] text-gray-600 mt-1 font-mono">Service management</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
+      <div class="mt-10 sm:mt-14 pt-10 border-t border-surface-600/30 text-center">
+        <p class="text-xs font-mono text-gray-600 uppercase tracking-wider mb-5">Also exploring</p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">Networking</span>
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">Docker</span>
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">CI/CD</span>
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">Process Management</span>
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">SSH</span>
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">Cron Jobs</span>
+          <span class="px-3 py-1.5 bg-surface-800/40 border border-surface-600/30 rounded-md text-xs text-gray-500 font-mono hover:text-gray-400 hover:border-surface-600/50 transition-colors cursor-default">Vim</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="relative pt-12 pb-24 sm:pt-16 sm:pb-32">
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-surface-600/50 to-transparent"></div>
+
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-accent/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div class="text-center mb-14">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="w-8 h-px bg-accent"></span>
+          <span class="font-mono text-xs text-accent uppercase tracking-widest">Contact</span>
+          <span class="w-8 h-px bg-accent"></span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+          Let's <span class="text-accent">Connect</span>
+        </h2>
+        <p class="mt-4 text-gray-500 max-w-md mx-auto text-sm sm:text-base">
+          Interested in collaboration or have an opportunity? I'd love to hear from you.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+        <a href="https://github.com/merrclop" target="_blank" rel="noopener noreferrer" class="contact-btn group flex flex-col items-center gap-4 bg-surface-800/50 border border-surface-600/40 rounded-xl p-7 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300">
+          <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-surface-700/70 text-gray-400 group-hover:bg-accent/10 group-hover:text-accent transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              <path d="M9 18c-4.51 2-5-2-7-2"></path>
+            </svg>
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">GitHub</h3>
+            <p class="text-xs text-gray-600 mt-1 font-mono">@merrclop</p>
+          </div>
+          <span class="flex items-center gap-1 text-[11px] text-gray-600 group-hover:text-accent font-mono transition-colors">
+            View profile <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+          </span>
+        </a>
+
+        <a href="mailto:misha.kabar@gmail.com" class="contact-btn group flex flex-col items-center gap-4 bg-surface-800/50 border border-surface-600/40 rounded-xl p-7 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300">
+          <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-surface-700/70 text-gray-400 group-hover:bg-accent/10 group-hover:text-accent transition-all duration-300">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">Email</h3>
+            <p class="text-xs text-gray-600 mt-1 font-mono">misha.kabar@gmail.com</p>
+          </div>
+          <span class="flex items-center gap-1 text-[11px] text-gray-600 group-hover:text-accent font-mono transition-colors">
+            Send message <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+          </span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/merrclop/" target="_blank" rel="noopener noreferrer" class="contact-btn group flex flex-col items-center gap-4 bg-surface-800/50 border border-surface-600/40 rounded-xl p-7 hover:border-accent/40 hover:bg-surface-700/50 transition-all duration-300">
+          <div class="flex items-center justify-center w-14 h-14 rounded-xl bg-surface-700/70 text-gray-400 group-hover:bg-accent/10 group-hover:text-accent transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-semibold text-gray-200 group-hover:text-white transition-colors">LinkedIn</h3>
+            <p class="text-xs text-gray-600 mt-1 font-mono">Mykhailo Kabar</p>
+          </div>
+          <span class="flex items-center gap-1 text-[11px] text-gray-600 group-hover:text-accent font-mono transition-colors">
+            Connect <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+          </span>
+        </a>
+      </div>
+            
+      <div class="mt-14 max-w-md mx-auto text-left">
+        <div class="bg-surface-800/60 border border-surface-600/30 rounded-xl p-4 font-mono text-sm shadow-xl">
+          <div class="flex items-center gap-2 text-gray-600 mb-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-green-500/50"></span>
+            <span class="text-[11px]">terminal</span>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-accent">$</span>
+            <span class="text-gray-400">echo</span>
+            <span class="text-mint">"Ready to contribute!"</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-surface-600/30 py-8 bg-surface-900/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <p class="text-xs text-gray-500 font-mono">
+        <span class="text-accent">~$</span> Developed &amp; Automated by Mykhailo Kabar
+      </p>
+      <p class="text-xs text-gray-600 font-mono">
+        &copy; <span id="current-year"></span> Mykhailo Kabar — All rights reserved
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

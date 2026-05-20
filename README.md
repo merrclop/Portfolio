@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This project is designed to showcase my technical skills, infrastructure knowledge, and engineering mindset. The interface is built with a modern, dark, terminal-inspired aesthetic reflecting my passion for Linux, automation, and system systems internals.
 
-🌐 **Live Portfolio:** [merrclop.github.io/portfolio/](merrclop.github.io/portfolio/)
+🌐 **Live Portfolio:** [merrclop.github.io/Portfolio/](merrclop.github.io/Portfolio/)
 
 ---
 
